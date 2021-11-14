@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.sebastianamhj.androidschoolweekone.ui.Opgave2.Opgave2Fragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_opgave2" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.sebastianamhj.androidschoolweekone.ui.Opgave1.Opgave1Fragment"
+        android:label="@string/menu_Opgave1"
+        tools:layout="@layout/fragment_opgave1" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.sebastianamhj.androidschoolweekone.ui.Opgave3.Opgave3Fragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_opgave3" >
+        <action
+            android:id="@+id/action_nav_slideshow_to_fragment_add_todo"
+            app:destination="@id/fragment_add_todo" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_add_todo"
+        android:name="com.sebastianamhj.androidschoolweekone.ui.Opgave3.AddTodoFragment"
+        android:label="AddTodo"
+        tools:layout="@layout/fragment_add_todo" />
+</navigation>
